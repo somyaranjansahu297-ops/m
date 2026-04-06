@@ -1,0 +1,151 @@
+:root {
+  --bg: #0d1321;
+  --card: #1d2d44;
+  --accent: #3e5c76;
+  --text: #f0ebd8;
+  --success: #1b9c85;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(120deg, #0d1321, #111827);
+}
+
+.container {
+  width: min(980px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #1f6feb;
+  color: #fff;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #cbd5e1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  background: rgba(29, 45, 68, 0.95);
+  border: 1px solid #39526b;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.plan-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.plan {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  background: #223852;
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.plan small {
+  display: block;
+  color: #bed1e6;
+}
+
+.options {
+  display: grid;
+  gap: 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #5a7594;
+  background: #0f2135;
+  color: #fff;
+}
+
+.summary {
+  background: #12273c;
+  border: 1px solid #405f80;
+  border-radius: 10px;
+  padding: 0.9rem;
+  margin: 1rem 0;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+}
+
+.total {
+  font-size: 1.1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--success);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.status {
+  min-height: 1.3rem;
+  color: #a7f3d0;
+}
+
+footer {
+  text-align: center;
+  color: #b8c8dd;
+  padding: 1rem 0 2rem;
+}
