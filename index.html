@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iron Pulse Gym | Membership Checkout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="badge">Powered by HDFC Bank Payments</p>
+      <h1>Join Iron Pulse Gym Today</h1>
+      <p class="subtitle">Choose your membership and pay securely with HDFC Bank payment options.</p>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card plans">
+      <h2>Membership Plans</h2>
+      <div class="plan-list">
+        <label class="plan" for="basic-plan">
+          <input id="basic-plan" type="radio" name="membership" value="500" data-name="Basic Membership" checked />
+          <span>
+            <strong>Basic Membership</strong>
+            <small>Full gym access</small>
+          </span>
+          <b>₹500 / month</b>
+        </label>
+
+        <label class="plan" for="trainer-plan">
+          <input id="trainer-plan" type="radio" name="membership" value="1000" data-name="Higher Membership + Trainer" />
+          <span>
+            <strong>Higher Membership + Trainer</strong>
+            <small>Gym access + personal trainer support</small>
+          </span>
+          <b>₹1000 / month</b>
+        </label>
+      </div>
+
+      <h3>HDFC Bank Purchase Options</h3>
+      <div class="options">
+        <label><input type="radio" name="payment" value="Credit / Debit Card" checked /> Credit / Debit Card</label>
+        <label><input type="radio" name="payment" value="UPI" /> UPI</label>
+        <label><input type="radio" name="payment" value="Net Banking" /> Net Banking</label>
+        <label><input type="radio" name="payment" value="Wallet" /> Wallet</label>
+        <label><input type="radio" name="payment" value="EMI" /> EMI (Eligible Cards)</label>
+      </div>
+    </section>
+
+    <section class="card checkout">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label>
+          Full Name
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          Mobile Number
+          <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required />
+        </label>
+
+        <div class="summary" aria-live="polite">
+          <p><span>Selected Plan:</span> <strong id="selected-plan">Basic Membership</strong></p>
+          <p><span>Payment Method:</span> <strong id="selected-payment">Credit / Debit Card</strong></p>
+          <p class="total"><span>Total Amount:</span> <strong id="selected-price">₹500</strong></p>
+        </div>
+
+        <button type="submit">Pay Securely with HDFC Bank</button>
+      </form>
+      <p id="status" class="status" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Secure transactions are processed through HDFC Bank payment services.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
